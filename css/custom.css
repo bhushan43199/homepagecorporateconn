@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.banner {
+  background-image:url(../img/Peace-of-mind.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  max-height: 100%;
+  overflow: auto;
+  position: relative;
+  background-position: bottom bottom;
+
+  padding: 10px 0px;
+  color: #fff;
+}
+
+.login {
+  width: 400px;
+  position: relative;
+  background: rgb(0, 0, 0, .8);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 50%;
+  margin: 0 auto;
+  padding: 40px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .7);
+  border-radius: 10px;
+}
+
+.login h2 {
+  color: #fff;
+  margin: 0 0 30px;
+  text-align: center;
+}
+
+.register {
+  width: 40%;
+  min-width: 300px;
+  position: absolute;
+  background: rgb(0, 0, 0, .8);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 30px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .7);
+  border-radius: 10px;
+}
+
+.register h2 {
+  color: #fff;
+  margin: 0 0 30px;
+  text-align: center;
+}
+.go_regster{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  display: block;
+  font-weight: 500;
+  margin-top: 10px;
+  font-size: 17px;
+}
+.go_regster a{
+  color: #03a9f4;
+  margin-left: 5px;
+}
+.inputBox {
+  position: relative;
+  margin-bottom: 30px;
+}
+.inputBox input {
+  width: 100%;
+  position: relative;
+  padding: 10px 0px;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  margin-bottom: 10px;
+}
+
+.inputBox input:selected {
+  background: transparent;
+}
+
+.inputBox label {
+  color: #fff;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+  ;
+  left: 0;
+  padding: 10px 0px;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.inputBox input:focus~label {
+  top: -20px;
+  left: 0;
+  color: #03a9f4;
+  font-size: 13px;
+}
+.select{
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px;
+  color: #03a9f4;
+  background: transparent;
+}
+#message {
+  display: none;
+  background: #fff;
+  position: absolute;
+  max-width: 400px;
+  width: 100%;
+  top: 106%;
+  left: 0;
+  overflow: auto;
+  height: auto;
+  bottom: auto;
+  color: #fff;
+  padding: 20px 30px 20px 30px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+#message::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -15px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+#message h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+#message p {
+  padding-bottom: 5px;
+  font-size: 15px;
+  margin-left: 15px;
+  margin-bottom: 0;
+}
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -15px;
+  content: "✔";
+}
+
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -15px;
+  content: "✖";
+}
+
+.login_with {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.login_with h4 {
+  margin: 15px 0px;
+  font-size: 18px;
+}
+
+.cardbox {
+  perspective: 500px;
+  margin: 0px 10px;
+  display: inline-block;
+}
+
+.card {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  transform-style: preserve-3d;
+  transition: .5s ease;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, .5);
+}
+
+.facebook {
+  background: #3b5998;
+}
+
+.twitter {
+  background: #00aced;
+}
+
+.googleplus {
+  background: #dd4b39;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  font-size: 20px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.card-back {
+  font-size: 10px;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.cardbox:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.boxing {
+  height: 500px;
+  background: #333;
+  width: 100%;
+  color: #fff;
+  padding: 0px 20px;
+}
+
+.pick {
+  width: 50px;
+  height: 50px;
+}
+
+.pickbig {
+  position: absolute;
+  width: 0px;
+  -webkit-transition: width 1s linear 0s;
+  transition: width 1s linear 0s;
+  z-index: 10;
+}
+
+.pick:hover+.pickbig {
+  width: 200px;
+}
+.forgot{
+  position: absolute;
+  right: 0;
+  top: -10px;
+  
+}
+.forgot a{
+  color: #03a9f4;
+}
+@media (max-width: 999px) {
+  #message h3 {
+    font-size: 25px;
+  }
+  #message p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .banner {
+    padding: 10px;
+  }
+  .login {
+    width: calc(100% - 20px);
+    transform: translate(-50%, -20%);
+    top: 20%;
+  }
+}
