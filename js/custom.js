@@ -5,15 +5,23 @@
       var number = document.getElementById("number");
       var length = document.getElementById("length");
 
-// When the user clicks on the password field, show the message box
-myInput.onfocus = function() {
-  document.getElementById("message").style.display = "block";
-}
+      var conPass = document.getElementById("conformpass");
+      var cpassmsg = document.getElementById("cpassmsg");
 
-// When the user clicks outside of the password field, hide the message box
-myInput.onblur = function() {
-  document.getElementById("message").style.display = "none";
+conPass.onkeyup = function() {
+  if((conPass.value == myInput.value)) {  
+    cpassmsg.classList.remove("invalid");
+    cpassmsg.classList.add("valid");
+  } else {
+    cpassmsg.classList.remove("valid");
+    cpassmsg.classList.add("invalid");
+  }
 }
+// }; if(cpassmsg.classList == "valid"){
+//   document.getElementById("messageCpass").style.display = "none";
+// }else{
+//   document.getElementById("messageCpass").style.display = "block";
+// }
 
 // When the user starts to type something inside the password field
 myInput.onkeyup = function() {
@@ -56,9 +64,16 @@ myInput.onkeyup = function() {
     length.classList.add("invalid");
   }
 }
+// if(length.classList == "valid"){
+//     document.getElementById("message").style.display = "none";
+//   }else{
+//     document.getElementById("message").style.display = "block";
+//   }
+
 
 // Register Page
   function validation(){
+
   var Username = document.getElementById('username').value;
   var Password = document.getElementById('password').value;
   var Conformpass = document.getElementById('conformpass').value;
@@ -75,7 +90,7 @@ myInput.onkeyup = function() {
   }else {
      document.getElementById('usererror').innerHTML = "**Please enter your username";
      return false;
-  }
+  } 
 
   if(passcheck.test(Password)){
     document.getElementById('passworderror').innerHTML = "";
@@ -83,7 +98,6 @@ myInput.onkeyup = function() {
      document.getElementById('passworderror').innerHTML = "**Please enter your password";
      return false;
   }
-
   if(Conformpass.match(Password)){
     document.getElementById('cpassworderror').innerHTML = "";
   }else {
@@ -104,5 +118,5 @@ myInput.onkeyup = function() {
      document.getElementById('mobileerror').innerHTML = "**Please enter your Mobile no";
      return false;
   }
-}
 
+}

@@ -11,12 +11,15 @@
    </head>
    <body>
       <div class="banner">
+        
          <div class="container">
+          
             <div class="register">
+               <h2 class="text-center">Venue Provider Register</h2>
                <h2>SignUp</h2>
                <form onsubmit="return validation()">
                   <div class="inputBox">
-                     <input type="text" name="" id="username" >
+                     <input type="text" name="" id="username" required>
                      <label for="username"><i class="fa fa-user"></i> UserName :</label>
                      <span id="usererror" class="text-danger font-weight-bold"></span>
                   </div>
@@ -39,37 +42,29 @@
                      </span>
                   </div>
                   <div class="inputBox">
-                     <input type="email" name="" id="email" > 
+                     <input type="email" name="email" id="email" required> 
                      <span id="emailerror" class="text-danger font-weight-bold" ></span>
                      <label><i class="fa fa-envelope" aria-hidden="true"></i> Email :</label>
                   </div>
                   <div class="inputBox">
-                     <input type="text" id="mobileno" pattern="\d{3}[\-]\d{3}[\-]\d{4}" >
+                     <input type="text" id="mobileno" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required>
                      <span id="mobileerror" class="text-danger font-weight-bold"></span>
                      <label><i class="fa fa-phone" aria-hidden="true"></i> Mobile Number :</label>
                   </div>
-                  <input type="submit" name="" class="btn btn-primary btn-block">
-                  <div class="login_with ">
-                     <h4>LOG IN WITH</h4>
-                     <div class="cardbox">
-                        <a href="#" title="Login with Facebook">
-                           <div class="card facebook">
-                              <div class="card-front"><i class="fa fa-facebook"></i></div>
-                              <div class="card-back">Facebook</div>
-                           </div>
-                        </a>
-                     </div>
-                     <div class="cardbox">
-                        <a href="#" title="Login with Facebook">
-                           <div class="card googleplus">
-                              <div class="card-front"><i class="fa fa-google-plus"></i></div>
-                              <div class="card-back">Google+</div>
-                           </div>
-                        </a>
-                     </div>
+                  <div class="inputBox addressBx">
+                     <input type="text" id="address" name="address" required>
+                     <span class="forgot locate"><a href="#"><i class="fa fa-map-marker"></i></a> </span>
+                     <label><i class="fa fa-phone" aria-hidden="true"></i> Venue Address</label>
                   </div>
+                  <div class="inputBox">
+                     <input type="file" id="file"  name="file" accept="image/gif, image/jpeg, image/png" multiple>
+                     <label><i class="fa fa-phone" aria-hidden="true"></i> Added venue Pick :</label>
+                  </div>
+                  <input type="submit" name="" class="btn btn-primary btn-block">
+
                   <div class="go_regster">Already have an account?<a href="index.html" title="Sign Up"> Sign In</a></div>
                </form>
+             
             </div> 
          </div>
       </div>
